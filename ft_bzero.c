@@ -13,13 +13,19 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*x;
-
-	x = (unsigned char *)s;
-	while (n > 0)
-	{
-		*x = 0;
-		n--;
-		x++;
-	}
+	ft_memset(s, 0, n);
+	return ;
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	char	s[6] = "Kitty";
+	printf("Antes: %s\n", s);
+
+	ft_bzero(s, sizeof(s));
+	printf("Despues: %s\n", s);
+	return(0);
+}
+*/

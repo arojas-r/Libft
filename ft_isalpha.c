@@ -6,7 +6,7 @@
 /*   By: arojas-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 16:45:12 by arojas-r          #+#    #+#             */
-/*   Updated: 2024/03/21 04:18:05 by arojas-r         ###   ########.fr       */
+/*   Updated: 2024/04/04 07:17:09 by arojas-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,3 +17,15 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	int	a;
+
+	a = 'r';
+	printf("%d\n", ft_isalpha(a));
+	return(0);
+}
+*/

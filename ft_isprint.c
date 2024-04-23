@@ -17,3 +17,15 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	int	a;
+
+	a = 46;
+	printf("%d\n", ft_isprint(a));
+	return(0);
+}
+*/

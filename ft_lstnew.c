@@ -1,43 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arojas-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 11:19:12 by arojas-r          #+#    #+#             */
-/*   Updated: 2024/04/19 18:40:38 by arojas-r         ###   ########.fr       */
+/*   Created: 2024/04/19 18:54:39 by arojas-r          #+#    #+#             */
+/*   Updated: 2024/04/19 19:52:10 by arojas-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	void	*ptr;
+	t_list	*head;
 
-	ptr = malloc(size * count);
-	if (!ptr)
+	head = malloc(sizeof(t_list));
+	if (!head)
 		return (NULL);
-	ft_bzero(ptr, (count * size));
-	return (ptr);
+	head->content = content;
+	head->next = NULL;
+	return (head);
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-	size_t count = 10;
-	char *result = ft_calloc(count, sizeof(char));
-	
-	size_t len = 0;
-	while (len < count)
-	{
-		if (result[len] != 0)
-		{
-			printf("error");
-			return 0;
-		}
-		len++;
-	}
-	printf("right\n");
-	return 0;
-}*/

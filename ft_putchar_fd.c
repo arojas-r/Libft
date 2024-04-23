@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arojas-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 11:19:12 by arojas-r          #+#    #+#             */
-/*   Updated: 2024/04/19 18:40:38 by arojas-r         ###   ########.fr       */
+/*   Created: 2024/04/10 19:26:45 by arojas-r          #+#    #+#             */
+/*   Updated: 2024/04/10 19:27:04 by arojas-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putchar_fd(char c, int fd)
 {
-	void	*ptr;
-
-	ptr = malloc(size * count);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, (count * size));
-	return (ptr);
+	write (fd, &c, 1);
+	return ;
 }
 /*
 #include <stdio.h>
-int main(void)
+#include <fcntl.h>
+int main() 
 {
-	size_t count = 10;
-	char *result = ft_calloc(count, sizeof(char));
+	int fd;
+	fd = open("example.txt", O_WRONLY | O_CREAT, 0644);
 	
-	size_t len = 0;
-	while (len < count)
+	if (fd == -1)
 	{
-		if (result[len] != 0)
-		{
-			printf("error");
-			return 0;
-		}
-		len++;
+	
+	return (1);
+
 	}
-	printf("right\n");
-	return 0;
-}*/
+		ft_putchar_fd('1', fd);
+	
+	close (fd);
+
+	return (0);
+    
+}
+*/

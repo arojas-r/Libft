@@ -1,40 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arojas-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 18:46:15 by arojas-r          #+#    #+#             */
-/*   Updated: 2024/04/04 14:52:41 by arojas-r         ###   ########.fr       */
+/*   Created: 2024/04/10 19:25:28 by arojas-r          #+#    #+#             */
+/*   Updated: 2024/04/10 19:25:56 by arojas-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	len;
-	char	*dup;
+	char	*result;
+	int		i;
 
-	len = ft_strlen(s1) + 1;
-	dup = malloc(sizeof(char) * (len));
-	if (!dup)
+	if (!s || !f)
 		return (NULL);
-	ft_memcpy(dup, s1, len);
-	return (dup);
+	i = 0;
+	len = ft_strlen(s);
+	result = malloc(sizeof(char) * (len + 1));
+	if (!result)
+		return (NULL);
+	while (s[i])
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }
 /*
+char test_function(unsigned int i, char c)
+{
+	i = 0;
+	while ( c >= 'a' && c <= 'z')
+		c -= 32;
+		return (c);
+}
+
 #include <stdio.h>
-#include <string.h>
 int main()
 {
-	char source [] = "Razer Kitty";
-	char *dup = strdup(source);
+	const char *str = "holitas";
+	char *result = ft_strmapi(str, test_function);
 
-	printf("%s\n", dup);
-	free(dup);
-	free (source);
-
+	printf("%s\n", result);
 	return 0;
 }
 */

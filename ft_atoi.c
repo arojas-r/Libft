@@ -6,7 +6,7 @@
 /*   By: arojas-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 11:10:39 by arojas-r          #+#    #+#             */
-/*   Updated: 2024/04/04 08:58:28 by arojas-r         ###   ########.fr       */
+/*   Updated: 2024/04/19 18:43:24 by arojas-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,23 +14,24 @@
 int	ft_atoi(const char *str)
 {
 	int	sign;
-	int	value;
+	int	num;
 
 	sign = 1;
-	value = 0;
+	num = 0;
 	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
 		str++;
 	if (*str == '-' || *str == '+')
 		sign = 44 - *str++;
 	while (ft_isdigit(*str))
-		value = value * 10 + (*str++ - '0');
-	return (sign * value);
+		num = num * 10 + (*str++ - '0');
+	return (sign * num);
 }
 /*
 #include <stdio.h>
-int	main(int argc, char **argv)
+int	main(void)
 {
-	if (argc == 2)
-		printf("%i\n", ft_atoi(argv[1]));
+	const char	str[7] = "  -0501";
+	printf("%i\n", ft_atoi(str));
 	return (0);
-}*/
+}
+*/

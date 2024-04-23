@@ -17,3 +17,14 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	int	a;
+
+	a = '0';
+	printf("%d\n", ft_isdigit(a));
+	return(0);
+}*/

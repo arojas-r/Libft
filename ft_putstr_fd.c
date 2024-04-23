@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arojas-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 11:19:12 by arojas-r          #+#    #+#             */
-/*   Updated: 2024/04/19 18:40:38 by arojas-r         ###   ########.fr       */
+/*   Created: 2024/04/10 19:27:37 by arojas-r          #+#    #+#             */
+/*   Updated: 2024/04/10 19:28:05 by arojas-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putstr_fd(char *s, int fd)
 {
-	void	*ptr;
-
-	ptr = malloc(size * count);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, (count * size));
-	return (ptr);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
 /*
+#include <fcntl.h>
 #include <stdio.h>
-int main(void)
+int main ()
 {
-	size_t count = 10;
-	char *result = ft_calloc(count, sizeof(char));
+	char *str = "Michitos ronroneando";
 	
-	size_t len = 0;
-	while (len < count)
+	int fd;
+
+	fd = open("borrar.txt", O_WRONLY | O_CREAT, 0644);
+	if (fd == -1)
 	{
-		if (result[len] != 0)
-		{
-			printf("error");
-			return 0;
-		}
-		len++;
+		perror("Error opening file");
+		return 1;
 	}
-	printf("right\n");
-	return 0;
-}*/
+	ft_putstr_fd(str, fd);
+
+	if (close(fd) == -1)
+	{
+		perror("Error closing file");
+		return 1;
+	}
+	return (0);
+}
+*/

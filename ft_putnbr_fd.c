@@ -1,43 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arojas-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 11:19:12 by arojas-r          #+#    #+#             */
-/*   Updated: 2024/04/19 18:40:38 by arojas-r         ###   ########.fr       */
+/*   Created: 2024/04/10 19:30:12 by arojas-r          #+#    #+#             */
+/*   Updated: 2024/04/10 19:30:37 by arojas-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	void	*ptr;
-
-	ptr = malloc(size * count);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, (count * size));
-	return (ptr);
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = n * -1;
+	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + '0', fd);
 }
 /*
 #include <stdio.h>
-int main(void)
+#include <fcntl.h>
+
+int main() 
 {
-	size_t count = 10;
-	char *result = ft_calloc(count, sizeof(char));
+	int fd;
+	fd = open("example.txt", O_WRONLY | O_CREAT, 0644);
 	
-	size_t len = 0;
-	while (len < count)
+	if (fd == -1)
 	{
-		if (result[len] != 0)
-		{
-			printf("error");
-			return 0;
-		}
-		len++;
+	
+	return (1);
+
 	}
-	printf("right\n");
-	return 0;
-}*/
+		ft_putnbr_fd(34, fd);
+	
+	close (fd);
+
+	return (0);
+    
+}
+*/
