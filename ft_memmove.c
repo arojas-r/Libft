@@ -32,7 +32,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			*d++ = *s++;
 	return (dest);
 }
-	/*#include <stdio.h>
+/*
+//Copia un bloque de memoria de un lugar a otro
+//manejando superposiciones de memoria correctamente.
+#include <stdio.h>
 int	main(void)
 {
 	char	src[6] = "Kitty";

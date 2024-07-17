@@ -23,18 +23,17 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(dup, s1, len);
 	return (dup);
 }
-/*
+/* 
+//Duplica una cadena de caracteres, asignando memoria para la copia y copiando 
+//el contenido de la cadena original a la nueva ubicación de memoria.
 #include <stdio.h>
 #include <string.h>
 int main()
 {
-	char source [] = "Razer Kitty";
-	char *dup = strdup(source);
+	char source[] = "Razer Kitty";
+	char *dup = ft_strdup(source);
 
 	printf("%s\n", dup);
 	free(dup);
-	free (source);
-
 	return 0;
-}
-*/
+} */

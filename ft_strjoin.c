@@ -29,6 +29,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (result);
 }
 /*
+//Concatena dos cadenas dadas en una nueva cadena.
 #include <stdio.h>
 int main ()
 {

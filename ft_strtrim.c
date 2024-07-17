@@ -31,6 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (result);
 }
 /*
+//Elimina los caracteres de espacio en blanco (espacios, tabulaciones, 
+//saltos de línea) al principio y al final de una cadena.
 #include <stdio.h>
 int main ()
 {

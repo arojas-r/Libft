@@ -25,6 +25,8 @@ void	ft_striteri(char *s, void (*f)(unsigned	int, char *))
 	}
 }
 /*
+//Itera sobre cada carácter de una cadena y aplica una función 
+//a cada carácter, pasando su índice como argumento.
 void test_function(unsigned int i, char *s)
 {
 	i = 0;

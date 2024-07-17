@@ -22,3 +22,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		*p++ = (unsigned char)c;
 	return (b);
 }
+//Establece los primeros n bytes 
+//de una región de memoria a un valor particular

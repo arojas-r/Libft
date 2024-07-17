@@ -23,15 +23,16 @@ int	ft_atoi(const char *str)
 	if (*str == '-' || *str == '+')
 		sign = 44 - *str++;
 	while (ft_isdigit(*str))
-		num = num * 10 + (*str++ - '0');
+		num = num * 10 + (*str++ - 48);
 	return (sign * num);
 }
 /*
+//funcion: el atoi sirve para convertir caracteres 
+en numeros enteros.
 #include <stdio.h>
 int	main(void)
 {
 	const char	str[7] = "  -0501";
 	printf("%i\n", ft_atoi(str));
 	return (0);
-}
-*/
+}*/

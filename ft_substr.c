@@ -30,7 +30,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr [len] = '\0';
 	return (substr);
 }
-/*
+
+/* 
+//Retorna una subcadena de la cadena dada, comenzando desde 
+//el índice especificado y con la longitud especificada.
 int main ()
 {
 	const char *str = "Sepárame esta cadena";
@@ -41,5 +44,4 @@ int main ()
 	printf("Memoria liberada\n");
 
 	return 0 ;
-}
-*/
+} */

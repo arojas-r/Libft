@@ -34,7 +34,7 @@ char	*ft_itoa(int n)
 	int		i;
 	char	*str;
 
-	if (n == -2147483648)
+	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	ncpy = n;
 	if (n < 0)
@@ -56,18 +56,19 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+
 /*
-int main()
+//Convierte un entero en una cadena de caracteres
+ int main()
 {
-    int n = -2147483648;
+    int n = 565;
 	char *str = ft_itoa (n);
 
 	if (str == NULL)
-    printf("Error al convertir el número %d a cadena.\n",(n));
+    printf("Error al convertir el número %d a cadena.\n", n);
 
 	printf("%s\n", str);
 	free(str);
 
 	return (0);
-}
-*/
+} */

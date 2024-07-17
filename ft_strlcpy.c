@@ -29,3 +29,5 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		cont++;
 	return (cont);
 }
+//Copia una cadena a un búfer 
+//asegurando que no se exceda el tamaño del búfer.

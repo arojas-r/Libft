@@ -13,12 +13,46 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	int	i;
+
+	i = 0;
 	if (!s)
 		return ;
-	write(fd, s, ft_strlen(s));
-	write(fd, "\n", 1);
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+	ft_putchar_fd('\n', fd);
 }
-/*
+/* 
+1
+int	main(void)
+{
+	char	*s;
+	int		fd;
+
+	s = "Kitty";
+	fd = 1;
+	ft_putendl_fd(s, fd);
+	return (0);
+}
+
+2
+#include <fcntl.h>
+#include <stdio.h>
+int	main(void)
+{
+	char	*str = "Michitos ronroneando";
+	int		fd;
+
+	fd = open("borrar.txt", O_WRONLY | O_CREAT, 0644);
+	ft_putendl_fd(str, fd);
+	close(fd);
+	return (0);
+}
+
+3
 #include <fcntl.h>
 #include <stdio.h>
 int main ()
@@ -41,5 +75,4 @@ int main ()
 		return 1;
 	}
 	return (0);
-}
-*/
+}*/

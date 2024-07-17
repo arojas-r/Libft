@@ -51,33 +51,25 @@ SRCS = ft_isalnum.c	 \
 	   ft_putendl_fd.c\
 	   ft_putnbr_fd.c \
 
-SRC_BONUS =	ft_lstnew.c
 
 FLAGS = -Wall -Wextra -Werror -c
 
 OBJS = $(SRCS:.c=.o)
 
-OBJS_BONUS = $(SRC_BONUS:.c=.o)
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
-
-bonus: $(OBJS_BONUS)
-	ar rc $(NAME) $(OBJS_BONUS)
-	ranlib $(NAME)
 
 %.o: %.c
 	$(CC) $(FLAGS) -o $@ $<
 
 clean:
-	$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re

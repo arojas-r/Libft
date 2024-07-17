@@ -13,12 +13,18 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	int	i;
+
+	i = 0;
 	if (!s)
 		return ;
-	write(fd, s, ft_strlen(s));
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }
-/*
-#include <fcntl.h>
+/* #include <fcntl.h>
 #include <stdio.h>
 int main ()
 {
@@ -40,5 +46,4 @@ int main ()
 		return 1;
 	}
 	return (0);
-}
-*/
+} */

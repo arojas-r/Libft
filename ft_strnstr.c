@@ -34,10 +34,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 /*
+//Encuentra la primera aparición de una subcadena en una cadena, 
+limitada a un número máximo de caracteres
 int main ()
 {
-    char haystack [] = "Perritos y palomas haciendo popito";
-    char needle[] = "haciendo";
+    char haystack [] = "Razer Kraken Kitty";
+    char needle[] = "Kraken";
 
     char *result = ft_strnstr(haystack, needle, sizeof(haystack));
 

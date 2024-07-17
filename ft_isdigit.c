@@ -18,6 +18,7 @@ int	ft_isdigit(int c)
 	return (0);
 }
 /*
+//Verifica si un carácter es un dígito decimal.
 #include <stdio.h>
 
 int	main(void)

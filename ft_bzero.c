@@ -17,6 +17,8 @@ void	ft_bzero(void *s, size_t n)
 	return ;
 }
 /*
+//funcion: bzero sirve para establecer los primeros 
+bytes 'n' de la memoria apuntada 's' a 0.
 #include <stdio.h>
 
 int main(void)
@@ -27,5 +29,4 @@ int main(void)
 	ft_bzero(s, sizeof(s));
 	printf("Despues: %s\n", s);
 	return(0);
-}
-*/
+}*/

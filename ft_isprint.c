@@ -18,6 +18,8 @@ int	ft_isprint(int c)
 	return (0);
 }
 /*
+//Determina si un carácter es imprimible
+o sea si es visible en la pantalla
 #include <stdio.h>
 
 int main(void)

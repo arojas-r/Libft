@@ -24,3 +24,4 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+//Busca la primera aparición de un byte en una región de memoria.

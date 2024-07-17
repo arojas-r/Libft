@@ -28,11 +28,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 /*
+//Compara dos bloques de memoria byte a byte.
 int main(void)
 {
-    char str1[] = "Hola Mundo";
-    char str2[] = "Hola Mundo";
-    char str3[] = "Hola Mundo!";
+    char str1[] = "Razer kraken";
+    char str2[] = "Razer kraken kitty";
+    char str3[] = "Razer kraken kitty!";
 
     int res1 = ft_memcmp(str1, str2, sizeof(str1));
     int res2 = ft_memcmp(str1, str3, sizeof(str1));

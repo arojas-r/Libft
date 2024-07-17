@@ -82,11 +82,13 @@ char	**ft_split(char const *s, char c)
 	return (strs);
 }
 /*
+//Divide una cadena en subcadenas basadas en un delimitador 
+//y devuelve un array de punteros a las subcadenas.
 #include <stdio.h>
-printf("%zu\n",sizeof(char *)); //gestionar memoria
+//printf("%zu\n",sizeof(char *)); //gestionar memoria
 int main ()
 {
-	const char *test = " Razer, kraken, kitty";
+	const char *test = " Razer,,,,,,, kraken, kitty";
 	char separator = ',';
 	
 	char **result = ft_split(test, separator);

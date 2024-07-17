@@ -18,6 +18,7 @@ int	ft_isascii(int c)
 	return (0);
 }
 /*
+Comprueba si un carácter está dentro del rango ASCII
 #include <stdio.h>
 
 int	main(void)

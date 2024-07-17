@@ -27,6 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 	return (0);
 }
 /*
+//Encuentra la última aparición de un carácter en una cadena.
 int main()
 {
     const char *s = "HALHITA";

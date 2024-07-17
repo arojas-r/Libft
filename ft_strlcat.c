@@ -30,3 +30,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 		return (d_len + s_len);
 	}
 }
+//Concatena una cadena a otra asegurando 
+//que no se exceda el tamaño del búfer.

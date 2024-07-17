@@ -22,6 +22,8 @@ void	*ft_calloc(size_t count, size_t size)
 	return (ptr);
 }
 /*
+//funcion: el calloc Asigna memoria para un array de elementos
+//inicializándolos todos en 0 o NULL
 #include <stdio.h>
 int main(void)
 {

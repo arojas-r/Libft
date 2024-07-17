@@ -33,6 +33,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 /*
+//Aplica una función a cada carácter de una 
+//cadena y crea una nueva cadena con los resultados.
 char test_function(unsigned int i, char c)
 {
 	i = 0;

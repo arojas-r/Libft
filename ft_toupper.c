@@ -17,11 +17,12 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-/*
+/* 
+//Convierte un carácter en mayúscula
 int main(void)
 {
 	char	a;
 
 	a = 'e';
 	printf("%c\n", ft_toupper(a));
-}*/
+} */

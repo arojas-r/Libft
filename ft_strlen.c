@@ -22,12 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (cont);
 }
 /* 
- size_t es el numero del resultado sizeof y del strlen 
- (el numero del string o del  array a size_t se le declara una 
- variable tipo contador porque size_t es lo que quiero que devuelva
- el contador se incializa (se le da el valor de cero)
- se hace el blucle que itera el string
- retorna cont porque tiene que retornar un size_
+//Calcula la longitud de una cadena de caracteres
 int	main(void)
 {
 	const char s[20] = "Razer kraken kitty";

@@ -20,6 +20,8 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 /*
+//strchr: Encuentra la primera aparición 
+//de un carácter en una cadena.
 int main ()
 {
 	const char *s = "CURSUS42";

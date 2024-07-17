@@ -18,6 +18,7 @@ int	ft_tolower(int c)
 	return (c);
 }
 /*
+//Convierte un carácter en minúscula
 int main(void)
 {
     printf("%c\n", ft_tolower ('A'));

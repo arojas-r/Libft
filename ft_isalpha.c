@@ -13,19 +13,19 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	return (0);
 }
-/*
-#include <stdio.h>
 
+/*
+//Comprueba si un carácter es una letra alfabética.
+#include <stdio.h>
 int	main(void)
 {
 	int	a;
 
-	a = 'r';
+	a = 'e';
 	printf("%d\n", ft_isalpha(a));
 	return(0);
-}
-*/
+} */
